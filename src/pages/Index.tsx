@@ -1,14 +1,14 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ProductDisplay } from "@/components/ProductDisplay";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Main content area - ready for product content */}
       <main className="pt-20">
-        {/* Content will be added here */}
+        <ProductDisplay />
       </main>
       
       <Footer />
