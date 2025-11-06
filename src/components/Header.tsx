@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CartDrawer } from "@/components/CartDrawer";
 import logo from "@/assets/logo.png";
 
 export const Header = () => {
@@ -44,8 +45,15 @@ export const Header = () => {
             />
           </a>
 
-          <div className="flex-1 flex justify-end">
-            {/* Hamburger menu button (visible on scroll or mobile) */}
+          <div className="flex-1 flex justify-end items-center gap-4">
+            {/* Cart - always visible when scrolled */}
+            <div className={`transition-all duration-400 ${
+              isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}>
+              <CartDrawer />
+            </div>
+            
+            {/* Hamburger menu button (visible on scroll) */}
             <Button
               variant="ghost"
               size="icon"

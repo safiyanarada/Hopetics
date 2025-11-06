@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -9,6 +10,8 @@ const Index = () => {
       <main className="pt-20">
         {/* Content will be added here */}
       </main>
+      
+      <Footer />
     </div>
   );
 };
