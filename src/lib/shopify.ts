@@ -187,3 +187,13 @@ export async function createStorefrontCheckout(items: Array<{ variantId: string;
     throw error;
   }
 }
+
+/**
+ * Crée un checkout direct avec un seul produit (sans passer par le panier)
+ * @param variantId - ID de la variante du produit
+ * @param quantity - Quantité (par défaut 1)
+ * @returns URL du checkout Shopify
+ */
+export async function directCheckout(variantId: string, quantity: number = 1): Promise<string> {
+  return createStorefrontCheckout([{ variantId, quantity }]);
+}
